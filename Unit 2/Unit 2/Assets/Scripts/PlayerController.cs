@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput;
     public float speed = 10.0f;
     public float xRange = 20.0f;
-   
+    public GameObject projectilePrefab;
 // Start is called before the first frame update
 void Start()
     {
@@ -18,6 +18,12 @@ void Start()
 // Update is called once per frame
 void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            // Launch a projectile from the player
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            //Debug.Log("Space bar is " + Input.GetKeyDown(KeyCode.Space));
+        }
         // Keep the player in bounds
         if (transform.position.x < -xRange)
         {
