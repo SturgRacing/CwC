@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f396cfdd4528344aac1914de93cf76d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 1574251093488761458}
+  obstaclePrefab: {fileID: 9171986725364967054, guid: e525f946cdd03944889b44f29c5ccecd, type: 3}
 --- !u!4 &420474512
 Transform:
   m_ObjectHideFlags: 0
@@ -261,6 +261,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &528528221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7796771764498709448, guid: 5909e3be8d2ac6441854dc3deafdfa32, type: 3}
+  m_PrefabInstance: {fileID: 6705975955060967292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &528528225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528528221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90feebd872b13594d8b8910611bf3c98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +380,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: f147a01ef442b2345a3546109476c690, type: 3}
       propertyPath: m_Name
-      value: Punk Human
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f147a01ef442b2345a3546109476c690, type: 3}
       propertyPath: m_LocalPosition.x
@@ -449,7 +466,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!65 &617833353
 BoxCollider:
@@ -487,6 +504,7 @@ MonoBehaviour:
   jumpForce: 17.5
   gravityModifier: 4
   isOnGround: 1
+  gameOver: 0
 --- !u!1 &2014335011
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +519,7 @@ GameObject:
   - component: {fileID: 2014335012}
   m_Layer: 9
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -592,11 +610,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1574251093488761458 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9171986725364967054, guid: e525f946cdd03944889b44f29c5ccecd, type: 3}
-  m_PrefabInstance: {fileID: 1606125177086636842}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1606125177086636842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -709,7 +722,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7796771764498709448, guid: 5909e3be8d2ac6441854dc3deafdfa32, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 528528225}
   m_SourcePrefab: {fileID: 100100000, guid: 5909e3be8d2ac6441854dc3deafdfa32, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
